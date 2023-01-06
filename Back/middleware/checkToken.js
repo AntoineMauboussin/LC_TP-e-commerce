@@ -4,12 +4,8 @@ function checkToken(req, res, next) {
     let token = ""
     if (req.headers.authorization) {
         token = req.headers.authorization.split(" ")[1]
-        let decoded = false;
-        try{
-            decoded = jwt.verify(token, 'ma super clé');
-        }catch(error){
-
-        }
+        const decoded = jwt.verify(token, 'ma super clé');
+        console.log(decoded);
         if (decoded && decoded.user) {
             req.user = { mail: decoded.user, niveau: decoded.niveau }
             next()
