@@ -1,0 +1,27 @@
+h1 {
+    color: red;
+}
+
+table,
+table * {
+    border: solid black 1px;
+}
+
+td,
+th {
+    padding: 5px 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.flex>form {
+    border: solid black 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
